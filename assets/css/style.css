@@ -55,8 +55,37 @@ main
     height: 100%;
 }
 
+main article
+{
+    display: grid;
+    grid-template-areas:
+        "title"
+        "description"
+        "images"
+        "links";
+    gap: 15px;
+}
+
+main article ~ article
+{
+    margin-top: 30px;
+}
+
+main article h1
+{
+    grid-area: title;
+    margin: 0;
+}
+
+main article p
+{
+    grid-area: description;
+    margin: 0;
+}
+
 main article .images
 {
+    grid-area: images;
     display: flex;
     overflow: auto;
 }
@@ -64,6 +93,11 @@ main article .images
 main article .images img
 {
     max-height: 200px;
+}
+
+main article section
+{
+    grid-area: links;
 }
 
 main article a.disabled
