@@ -97,7 +97,7 @@ main article .images img ~ img
     margin-left: 15px;
 }
 
-main article section
+main article section.links
 {
     grid-area: links;
 }
