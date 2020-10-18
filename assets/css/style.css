@@ -42,6 +42,12 @@ header a ~ a
     margin-left: 15px;
 }
 
+header .right
+{
+    display: flex;
+    margin-left: auto;
+}
+
 main article
 {
     display: grid;
