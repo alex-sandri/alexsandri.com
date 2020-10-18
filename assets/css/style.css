@@ -67,9 +67,13 @@ main article h1
     margin: 0;
 }
 
-main article p
+main article .description
 {
     grid-area: description;
+}
+
+main article .description p
+{
     margin: 0;
 }
 
