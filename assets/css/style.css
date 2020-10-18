@@ -1,3 +1,23 @@
+html[data-theme=light] #theme-toggle .light
+{
+    display: none;
+}
+
+html[data-theme=light] #theme-toggle .dark
+{
+    display: block;
+}
+
+html[data-theme=dark] #theme-toggle .light
+{
+    display: block;
+}
+
+html[data-theme=dark] #theme-toggle .dark
+{
+    display: none;
+}
+
 *
 {
     box-sizing: border-box;
