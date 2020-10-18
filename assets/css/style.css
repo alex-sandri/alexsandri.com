@@ -1,0 +1,61 @@
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: monospace;
+    margin: 0;
+    padding: 15px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100px auto min-content;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+}
+
+header
+{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+header a ~ a
+{
+    margin-left: 15px;
+}
+
+main
+{
+    grid-area: content;
+    overflow: auto;
+    height: 100%;
+}
+
+main article a.disabled
+{
+    pointer-events: none;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+main article a.disabled::after
+{
+    content: " (Not Available)";
+}
+
+#name
+{
+    grid-area: footer;
+    font-size: xxx-large;
+    margin: 0;
+}
