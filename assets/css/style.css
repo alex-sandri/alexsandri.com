@@ -55,6 +55,11 @@ main
     height: 100%;
 }
 
+main article img
+{
+    max-height: 200px;
+}
+
 main article a.disabled
 {
     pointer-events: none;
