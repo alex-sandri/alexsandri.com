@@ -57,6 +57,7 @@ main article
         "title"
         "description"
         "images"
+        "tags"
         "links";
     gap: 15px;
     border-left: 5px solid white;
@@ -95,6 +96,11 @@ main article .images img
 main article .images img ~ img
 {
     margin-left: 15px;
+}
+
+main article section.tags
+{
+    grid-area: tags;
 }
 
 main article section.links
