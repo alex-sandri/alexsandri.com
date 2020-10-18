@@ -55,7 +55,13 @@ main
     height: 100%;
 }
 
-main article img
+main article .images
+{
+    display: flex;
+    overflow: auto;
+}
+
+main article .images img
 {
     max-height: 200px;
 }
