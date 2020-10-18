@@ -97,6 +97,11 @@ main article .images img
     max-height: 200px;
 }
 
+main article .images img ~ img
+{
+    margin-left: 15px;
+}
+
 main article section
 {
     grid-area: links;
