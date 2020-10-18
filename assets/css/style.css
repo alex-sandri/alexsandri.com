@@ -112,7 +112,7 @@ main article section.tags
 
 main article section.tags span
 {
-    border: 1px solid white;
+    border: 1px solid;
     padding: 5px;
     border-radius: 50px;
 }
