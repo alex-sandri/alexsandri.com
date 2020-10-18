@@ -108,3 +108,13 @@ main article a.disabled::after
 {
     content: " (Not Available)";
 }
+
+footer
+{
+    margin-top: 45px;
+}
+
+footer h1
+{
+    margin: 0;
+}
