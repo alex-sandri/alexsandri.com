@@ -103,6 +103,13 @@ main article section.tags
     grid-area: tags;
 }
 
+main article section.tags span
+{
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50px;
+}
+
 main article section.links
 {
     grid-area: links;
