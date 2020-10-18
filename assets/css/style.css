@@ -82,7 +82,8 @@ main article .images
 
 main article .images img
 {
-    max-height: 200px;
+    max-height: 300px;
+    max-width: 100%;
 }
 
 main article .images img ~ img
