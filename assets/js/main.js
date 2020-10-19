@@ -2,18 +2,22 @@
 
 const themeToggle = document.getElementById("theme-toggle");
 
-const changeTheme = (mediaQueryOnly) =>
+class Preferences
 {
-    let theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    static get(key) { return localStorage.getItem(key); }
 
-    if (!mediaQueryOnly && document.documentElement.getAttribute("data-theme"))
-        theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
-    document.documentElement.setAttribute("data-theme", theme);
+    static set(key, value) { localStorage.setItem(key, value); }
 }
 
-themeToggle.addEventListener("click", () => changeTheme(false));
+const changeTheme = (theme) =>
+{
+    document.documentElement.setAttribute("data-theme", theme);
 
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => changeTheme(true));
+    Preferences.set("theme", theme);
+}
 
-changeTheme();
+themeToggle.addEventListener("click", () => changeTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"));
+
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => changeTheme(e.matches ? "dark" : "light"));
+
+changeTheme(Preferences.get("theme"));
