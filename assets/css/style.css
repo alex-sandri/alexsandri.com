@@ -110,6 +110,9 @@ main article .images img ~ img
 main article section.tags
 {
     grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 main article section.tags span
