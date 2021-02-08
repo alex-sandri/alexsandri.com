@@ -8,8 +8,8 @@ body
     font-family: monospace;
     margin: 0;
     padding: 15px;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #3c3c3c;
 }
 
 a
@@ -64,7 +64,7 @@ main article
         "tags"
         "links";
     gap: 15px;
-    border-left: 5px solid black;
+    border-left: 5px solid white;
     padding-left: 15px;
 }
 
@@ -144,23 +144,16 @@ footer h1
     margin: 0;
 }
 
-html[data-theme=light] #theme-toggle .light
+@media (prefers-color-scheme: light)
 {
-    display: none;
-}
+    body
+    {
+        color: black;
+        background-color: white;
+    }
 
-html[data-theme=dark] #theme-toggle .dark
-{
-    display: none;
-}
-
-html[data-theme=dark] body
-{
-    color: white;
-    background-color: #3c3c3c;
-}
-
-html[data-theme=dark] main article
-{
-    border-left-color: white;
+    main article
+    {
+        border-left-color: black;
+    }
 }
