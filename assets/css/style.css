@@ -99,6 +99,7 @@ article .images img
     height: 300px;
     border: 2px solid currentColor;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 article .images img ~ img
