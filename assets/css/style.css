@@ -171,3 +171,45 @@ article .links .not-available
     color: white;
     background-color: #dd0031;
 }
+
+.tag.firebase
+{
+    color: white;
+    background-color: #ff8a65;
+}
+
+.tag.flutter
+{
+    color: white;
+    background-color: #075b9a;
+}
+
+.tag.handlebars
+{
+    color: white;
+    background-color: #f0772b;
+}
+
+.tag.postgresql
+{
+    color: #336791;
+    background-color: white;
+}
+
+.tag.scss
+{
+    color: white;
+    background-color: #bf4080;
+}
+
+.tag.stripe
+{
+    color: white;
+    background-color: #32325d;
+}
+
+.tag.typescript
+{
+    color: white;
+    background-color: #3178c6;
+}
