@@ -7,6 +7,7 @@
     --article-bg-color: var(--bg-color);
 
     --aside-width: 12ch;
+    --aside-width-sm: 7ch;
 }
 
 *
@@ -43,6 +44,7 @@ aside
 {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     grid-area: menu;
     position: sticky;
@@ -55,10 +57,49 @@ aside
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+aside > div
+{
+    width: 100%;
+}
+
 aside > h1
 {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+}
+
+#nyan-cat
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    height: var(--aside-width);
+    animation: move-nyan-cat 5s linear infinite;
+}
+
+@media (max-width: 500px)
+{
+    aside
+    {
+        flex-direction: row;
+        writing-mode: vertical-lr;
+        width: var(--aside-width-sm);
+    }
+
+    aside > div
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        transform: rotate(180deg);
+    }
+
+    #nyan-cat
+    {
+        height: var(--aside-width-sm);
+    }
 }
 
 main
@@ -128,18 +169,6 @@ article .links .not-available
 {
     opacity: 0.6;
     cursor: not-allowed;
-}
-
-#nyan-cat
-{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    transform: rotate(-90deg);
-    transform-origin: 0 0;
-    height: var(--aside-width);
-    animation: move-nyan-cat 5s linear infinite;
 }
 
 @keyframes move-nyan-cat
