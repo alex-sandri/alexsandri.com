@@ -152,3 +152,11 @@ article .links .not-available
         bottom: 100vh;
     }
 }
+
+@media (prefers-reduced-motion)
+{
+    #nyan-cat
+    {
+        display: none;
+    }
+}
