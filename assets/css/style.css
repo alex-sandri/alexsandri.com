@@ -172,6 +172,18 @@ article .links .not-available
     background-color: #dd0031;
 }
 
+.tag.aws
+{
+    color: #ec912d;
+    background-color: #232f3e;
+}
+
+.tag.elasticsearch
+{
+    color: white;
+    background-color: #343741;
+}
+
 .tag.firebase
 {
     color: white;
