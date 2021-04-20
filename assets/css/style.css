@@ -5,6 +5,8 @@
 
     --article-text-color: var(--text-color);
     --article-bg-color: var(--bg-color);
+
+    --aside-width: 12ch;
 }
 
 *
@@ -47,9 +49,10 @@ aside
     top: 0;
     padding: 1rem;
     height: 100vh;
+    width: var(--aside-width);
     text-align: center;
     color: greenyellow;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 aside > h1
@@ -124,4 +127,28 @@ article .links .not-available
 {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+#nyan-cat
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    height: var(--aside-width);
+    animation: move-nyan-cat 5s linear infinite;
+}
+
+@keyframes move-nyan-cat
+{
+    from
+    {
+        bottom: -100%;
+    }
+    to
+    {
+        bottom: 100vh;
+    }
 }
