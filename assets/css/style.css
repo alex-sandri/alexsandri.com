@@ -161,3 +161,13 @@ article .links .not-available
         display: none;
     }
 }
+
+/* -------
+-- TAGS --
+------- */
+
+.tag.angular
+{
+    color: white;
+    background-color: #dd0031;
+}
