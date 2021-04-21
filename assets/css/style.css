@@ -121,6 +121,7 @@ article
     color: var(--article-text-color);
     background-color: var(--article-bg-color);
     word-break: break-word;
+    border-top: 1px solid white;
 }
 
 article header h1,
