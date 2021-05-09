@@ -208,6 +208,12 @@ article .links .not-available
     background-color: #232f3e;
 }
 
+.tag.css
+{
+    color: white;
+    background-color: #264de4;
+}
+
 .tag.elasticsearch
 {
     color: white;
@@ -230,6 +236,12 @@ article .links .not-available
 {
     color: white;
     background-color: #f0772b;
+}
+
+.tag.html
+{
+    color: white;
+    background-color: #e54c21;
 }
 
 .tag.postgresql
