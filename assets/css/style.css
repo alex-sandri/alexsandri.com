@@ -69,13 +69,7 @@ main .cards {
 
 main .cards article {
   display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: max-content auto;
-  grid-template-areas:
-    "logo title"
-    "logo description"
-    "details details"
-    "article-footer article-footer";
+  grid-template-rows: auto max-content;
   padding: 1rem;
   color: var(--fg-color);
   background-color: var(--bg-color);
@@ -84,34 +78,23 @@ main .cards article {
 }
 
 main .cards article h1 {
-  grid-area: title;
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
 }
 
-main .cards article p {
-  grid-area: description;
-}
-
-main .cards article img,
-main .cards article .placeholder {
-  grid-area: logo;
+main .cards article > div > img {
   width: 3rem;
   height: 3rem;
-  padding: 1px;
-  margin-right: 1rem;
-  background: var(--fg-color);
+  margin-bottom: 0.2rem;
+  border: 1px solid var(--fg-color);
   border-radius: 50%;
 }
 
-main .cards article details {
-  grid-area: details;
-  margin-top: 0.5rem;
-}
-
-main .cards article footer {
-  grid-area: article-footer;
-  margin-top: 0.5rem;
+main .cards article .details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin: 1rem 0;
 }
 
 @media (max-width: 750px) {
