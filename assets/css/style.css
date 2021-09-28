@@ -13,6 +13,7 @@
 
 a {
   color: var(--fg-color);
+  text-decoration: none;
 }
 
 body {
@@ -37,7 +38,7 @@ aside {
   border-right: 1px solid var(--fg-color);
 }
 
-aside img {
+aside .profile-pic {
   width: 15rem;
   height: 15rem;
   margin-bottom: 1rem;
