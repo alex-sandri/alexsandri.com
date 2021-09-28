@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+
 :root {
   --fg-color: white;
   --bg-color: #223;
@@ -16,19 +18,17 @@ a {
 body {
   display: grid;
   height: 100vh;
-  grid-template-rows: auto calc(2rem + 20px);
   grid-template-columns: max-content auto;
   grid-template-areas:
-    "aside main"
-    "aside footer";
-  font-family: monospace;
+    "aside main";
+  font-size: 0.8rem;
+  font-family: 'Roboto Mono', sans-serif;
   color: var(--fg-color);
   background-color: var(--bg-color);
 }
 
 aside,
-main,
-footer {
+main {
   padding: 1rem;
 }
 
@@ -73,7 +73,9 @@ main .cards article {
   grid-template-columns: max-content auto;
   grid-template-areas:
     "logo title"
-    "logo description";
+    "logo description"
+    "details details"
+    "article-footer article-footer";
   padding: 1rem;
   color: var(--fg-color);
   background-color: var(--bg-color);
@@ -84,13 +86,15 @@ main .cards article {
 main .cards article h1 {
   grid-area: title;
   font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
 main .cards article p {
   grid-area: description;
 }
 
-main .cards article img {
+main .cards article img,
+main .cards article .placeholder {
   grid-area: logo;
   width: 3rem;
   height: 3rem;
@@ -100,9 +104,22 @@ main .cards article img {
   border-radius: 50%;
 }
 
-footer {
-  grid-area: footer;
-  display: flex;
-  align-items: center;
-  border-top: 1px solid var(--fg-color);
+main .cards article details {
+  grid-area: details;
+  margin-top: 0.5rem;
+}
+
+main .cards article footer {
+  grid-area: article-footer;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 750px) {
+  body {
+    grid-template-rows: max-content auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "aside"
+      "main";
+  }
 }
