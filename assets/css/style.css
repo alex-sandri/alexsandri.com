@@ -1,13 +1,11 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 
 :root {
   --fg-color: white;
   --bg-color: #223;
 }
 
-*
-{
-  margin: 0;
+* {
   box-sizing: border-box;
 }
 
@@ -17,93 +15,115 @@ a {
 }
 
 body {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: max-content auto;
-  grid-template-areas:
-    "aside main";
-  font-size: 0.8rem;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   color: var(--fg-color);
   background-color: var(--bg-color);
-}
 
-aside,
-main {
+  margin: 0 auto;
   padding: 1rem;
+  max-width: 1280px;
 }
 
-aside {
-  grid-area: aside;
-  border-right: 1px solid var(--fg-color);
-}
+body > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-aside .profile-pic {
-  width: 15rem;
-  height: 15rem;
-  margin-bottom: 1rem;
-  border-radius: 50%;
-}
-
-aside h1 {
-  font-size: xx-large;
-  margin-bottom: 0.2rem;
-}
-
-main {
-  grid-area: main;
-}
-
-main section {
   margin-bottom: 2rem;
 }
 
-main section h1 {
-  margin-bottom: 1rem;
+body > header h1 {
+  margin: 0;
+  font-weight: 800;
 }
 
-main .cards {
+body > header div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+body > header div a {
+  display: flex;
+}
+
+section > h1 {
+  color: green;
+}
+
+section > h1::before {
+  content: "// ";
+}
+
+#projects > div {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(50ch, 100%), 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 
-main .cards article {
-  display: grid;
-  grid-template-rows: auto max-content;
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 1rem;
-  color: var(--fg-color);
-  background-color: var(--bg-color);
-  border: 1px solid var(--fg-color);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-main .cards article h1 {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+.project header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  min-height: 4rem;
 }
 
-main .cards article > div > img {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 0.2rem;
-  border: 1px solid var(--fg-color);
+.project header img {
+  height: 4rem;
   border-radius: 50%;
 }
 
-main .cards article .details {
+.project header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.project .details h2 {
+  color: green;
+  font-size: medium;
+  margin-bottom: 0.7rem;
+}
+
+.project .details h2::before {
+  content: "// ";
+}
+
+.project .details > div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
-  margin: 1rem 0;
 }
 
-@media (max-width: 750px) {
-  body {
-    grid-template-rows: max-content auto;
-    grid-template-columns: auto;
-    grid-template-areas:
-      "aside"
-      "main";
+.project footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 900px) {
+  #projects > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body > header div {
+    margin-top: 1rem;
   }
 }
