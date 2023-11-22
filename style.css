@@ -47,12 +47,13 @@ body {
 
 .links {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
   gap: 0.5rem;
   margin-top: 1rem;
 }
 
 .links > a {
-  display: flex;
+  color: var(--fg-color);
+  opacity: 0.7;
 }
