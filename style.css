@@ -27,6 +27,11 @@ body {
   justify-content: center;
 }
 
+.badges {
+  display: flex;
+  gap: 0.2rem;
+}
+
 .aws-cert {
   display: flex;
 }
