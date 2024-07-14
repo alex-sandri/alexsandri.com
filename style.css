@@ -31,10 +31,6 @@ body {
   gap: 0.2rem;
 }
 
-.aws-cert {
-  display: flex;
-}
-
 .rank {
   display: block;
 
