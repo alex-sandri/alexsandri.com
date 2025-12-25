@@ -1,9 +1,12 @@
 body {
   background-color: #081421;
-  animation: bgColor 30s infinite alternate;
+  animation: bgColor 5s infinite alternate;
 }
 
 @keyframes bgColor {
+  0% {
+    background-color: #081421;
+  }
   25% {
     background-color: #0E1E31;
   }
