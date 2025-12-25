@@ -1,12 +1,19 @@
-* {
-  box-sizing: border-box;
+body {
+  background-color: #081421;
+  animation: bgColor 30s infinite alternate;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0 auto;
+@keyframes bgColor {
+  25% {
+    background-color: #0E1E31;
+  }
+  50% {
+    background-color: #132740;
+  }
+  75% {
+    background-color: #193150;
+  }
+  100% {
+    background-color: #1E3A5F;
+  }
 }
